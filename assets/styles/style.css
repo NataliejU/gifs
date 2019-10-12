@@ -4,7 +4,8 @@ h1 {
     text-decoration-style: solid;
     text-decoration-color: #366FFF;
     font-size: 6em;
-    font-display: fallback
+    font-display: fallback;
+    background-color: white;
 }
 body {
     background-image: url("../styles/images/Upside-Down_Face_Emoji.png")
