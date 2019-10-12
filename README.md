@@ -1,5 +1,4 @@
 # gifs
 Animated GIF search
 
-Enter a search term in the form field
-When submitted, you will see a page of animated gifs.
+The page shows some actions already chosen, that when you click on them GIFS for that action come up. Add a different action and then click on it to see which actions show up.
