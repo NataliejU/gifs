@@ -1,3 +1,11 @@
 h1 {
-    color: blue;
+    color:#429EFF;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #366FFF;
+    font-size: 6em;
+    font-display: fallback
+}
+body {
+    background-image: url("../styles/images/Upside-Down_Face_Emoji.png")
 }

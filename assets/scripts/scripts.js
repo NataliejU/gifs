@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     // An array of actions, new actions will be pushed into this array;
-    var actions = ["Dancing", "Jogging", "Falling", "Reading", "Swimming", "Eating", "Crying", "Winking", "Hopping"];
+    var actions = ["Dancing","Swimming","Crying", "Winking"];
     // Creating Functions & Methods
     // Function that displays all gif buttons
     function displayGifButtons(){
