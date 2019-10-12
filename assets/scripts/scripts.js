@@ -1,10 +1,9 @@
 $( document ).ready(function() {
-    // An array of actions, new actions will be pushed into this array;
+    // An array of actions, new actions will be pushed into here;
     var actions = ["Dancing","Swimming","Crying", "Winking"];
-    // Creating Functions & Methods
-    // Function that displays all gif buttons
+   // Function that displays all gif buttons
     function displayGifButtons(){
-        $("#gifButtonsView").empty(); // erasing anything in this div id so that it doesnt duplicate the results
+        $("#gifButtonsView").empty(); 
         for (var i = 0; i < actions.length; i++){
             var gifButton = $("<button>");
             gifButton.addClass("action");
@@ -31,14 +30,13 @@ $( document ).ready(function() {
     function displayGifs(){
         var action = $(this).attr("data-name");
         var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + action + "&api_key=dc6zaTOxFJmzC&limit=10";
-        console.log(queryURL); // displays the constructed url
+        console.log(queryURL); 
         $.ajax({
             url: queryURL,
             method: 'GET'
         })
         .done(function(response) {
-            console.log(response); // console test to make sure something returns
-            $("#gifsView").empty(); // erasing anything in this div id so that it doesnt keep any from the previous click
+            $("#gifsView").empty();  
             var results = response.data; //shows results of gifs
             if (results == ""){
               alert("There isn't a gif for this selected button");
@@ -50,9 +48,7 @@ $( document ).ready(function() {
                 // pulling gif
                 var gifImage = $("<img>");
                 gifImage.attr("src", results[i].images.fixed_height_small_still.url); // still image stored into src of image
-                gifImage.attr("data-still",results[i].images.fixed_height_small_still.url); // still image
                 gifImage.attr("data-animate",results[i].images.fixed_height_small.url); // animated image
-                gifImage.attr("data-state", "still"); // set the image state
                 gifImage.addClass("image");
                 gifDiv.append(gifImage);
                 // pulling still image of gif
